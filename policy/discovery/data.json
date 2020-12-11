@@ -1,0 +1,49 @@
+{
+  "example": {
+    "discovery": {
+      "bundles": {
+        "system": {
+          "service": "my_service",
+          "resource": "/policy/system/bundle.tar.gz",
+          "polling": {
+            "min_delay_seconds": 15,
+            "max_delay_seconds": 30
+          }
+        },
+        "global": {
+          "service": "my_service",
+          "resource": "/policy/global/bundle.tar.gz",
+          "polling": {
+            "min_delay_seconds": 15,
+            "max_delay_seconds": 30
+          }
+        },
+        "child": {
+          "service": "my_service",
+          "resource": "/policy/child/bundle.tar.gz",
+          "polling": {
+            "min_delay_seconds": 15,
+            "max_delay_seconds": 30
+          }
+        }
+      },
+      "caching": {
+        "inter_query_builtin_cache": {
+          "max_size_bytes": 8000000
+        }
+      },
+      "decision_logs": {
+        "reporting": {
+          "min_delay_seconds": 15,
+          "max_delay_seconds": 30
+        },
+        "partition_name": "child",
+        "service": "my_service"
+      },
+      "status": {
+        "partition_name": "child",
+        "service": "my_service"
+      }
+    }
+  }
+}
