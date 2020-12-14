@@ -52,6 +52,7 @@ build_osx:
 	@docker run \
 		--rm \
 		-v "$(PWD):/usr/src/myapp" \
+		-v go-modules:/go/pkg/mod \
 		-w /usr/src/myapp \
 		-e GOOS=darwin \
 		-e GOARCH=amd64 \
@@ -63,6 +64,7 @@ build_osx:
 	@docker run \
 		--rm \
 		-v "$(PWD):/usr/src/myapp" \
+		-v go-modules:/go/pkg/mod \
 		-w /usr/src/myapp \
 		-e GOOS=darwin \
 		-e GOARCH=amd64 \
@@ -122,6 +124,7 @@ build_linux:
 	@docker run \
 		--rm \
 		-v "$(PWD):/usr/src/myapp" \
+		-v go-modules:/go/pkg/mod \
 		-w /usr/src/myapp \
 		-e GOOS=linux \
 		-e GOARCH=amd64 \
@@ -133,6 +136,7 @@ build_linux:
 	@docker run \
 		--rm \
 		-v "$(PWD):/usr/src/myapp" \
+		-v go-modules:/go/pkg/mod \
 		-w /usr/src/myapp \
 		-e GOOS=linux \
 		-e GOARCH=amd64 \

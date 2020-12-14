@@ -6,7 +6,7 @@ default authz = false
 
 authz {
 	global.high_risk
-	global.http_send_call != ""
+	global.http_send_call
 }
 
 default obligations = set()

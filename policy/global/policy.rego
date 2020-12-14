@@ -120,7 +120,7 @@ high_risk_o = o {
 http_send_call = r {
 	response := http.send({
 		"method": "GET",
-		"url": "http://localhost:8888/some_data",
+		"url": sprintf("http://localhost:8888/some_data?%s", [input.cache_bust]),
 		"enable_redirect": true,
 		"timeout": "5s",
 		"cache": true,
